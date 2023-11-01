@@ -8,20 +8,6 @@ html {
 h1 {
     font-size: 1.25em;
 }
-h2, h3 {
-    font-size: 1em;
-}
-p, dl, dd {
-    font-size: 1em;
-}
-footer p {
-    font-size: .75em;
-}
-body {
-    max-width: 834px;
-    background-color: #ffffff;
-    margin: 0 auto;
-}
 nav {
     background-color: #030A8C;
     font-family: Geneva;
@@ -59,6 +45,29 @@ nav li:first-child a {
 nav input {
     display: none;
 }
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.3s;
+}
+nav li:not(:first-child) {
+    display: flex;
+}
+h2, h3 {
+    font-size: 1em;
+    font:tahoma;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+footer p {
+    font-size: .75em;
+}
+body {
+    max-width: 834px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
 label {
     display: none;
     width: 30px;
@@ -85,14 +94,6 @@ label:after {
 label div {
     top: 50%;
     transform: translateY(-50%);
-}
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    transition: all 0.3s;
-}
-nav li:not(:first-child) {
-    display: flex;
 }
 #home{
     margin: 0 auto;
