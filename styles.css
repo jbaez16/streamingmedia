@@ -1,0 +1,406 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #020659;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 1.25em;
+}
+h2, h3 {
+    font-size: 1em;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+footer p {
+    font-size: .75em;
+}
+body {
+    max-width: 834px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+nav {
+    background-color: #030A8C;
+    font-family: Geneva;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+nav li {
+    padding: 10px 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+
+}
+nav a:hover {
+    border-radius: 8px;
+    text-decoration-line: underline;
+}
+nav li:first-child a {
+    font-family: Geneva;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #ffffff;
+    justify-content: center;
+}
+nav input {
+    display: none;
+}
+label {
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+label:before, label:after, label div {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+label:before {
+    top: 0;
+}
+label:after {
+    bottom: 0;
+}
+label div {
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.3s;
+}
+nav li:not(:first-child) {
+    display: flex;
+}
+#home{
+    margin: 0 auto;
+}
+@media (max-width: 834px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li:not(:first-child) {
+        display: none;
+    }
+
+    nav input:checked+label+ul li:not(:first-child) {
+        display: flex;
+    }
+
+    label[for="menu"] {
+        display: inline-block;
+    }
+}
+#jazz {
+    padding-right: 25px;
+    background-image: linear-gradient(to right, #2104D9, black);
+    display: flex;
+    font-family: Tahoma;
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-direction: column;
+}
+#jazz h2 {
+
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+#jazz p {
+    line-height: 1.5;
+    font-size: small;
+    text-align: justify;
+    margin-top: 0;
+    padding-top: 10px;
+    color: #ffffff;
+}
+#trending h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: tahoma;
+    padding-left: 25px;
+    color: #590242;
+}
+#trending h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 5px;
+    font-family: tahoma;
+    color: #590242;
+
+}
+.more-trending {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 25px;
+}
+.more-trending a {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+@media (max-width: 834px) {
+    .more-trending {
+        text-align: start;
+        margin-left: 10px;
+    }
+}
+.scroll {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 5px;
+    width: 350px;
+    margin: 0 auto;
+}
+dl {
+    display: flex;
+    padding-left: 5px;
+}
+dd{
+    color: #590242;
+}
+dt {
+    padding-right: 0px;
+    color: #590242;
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar,
+#curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track,
+#curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb,
+#curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover,
+#curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+.playlist-container::-webkit-scrollbar,
+.curated-playlists::-webkit-scrollbar {
+    width: 15px;
+}
+.playlist-container::-webkit-scrollbar-track,
+.curated-playlists::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+.playlist-container::-webkit-scrollbar-thumb,
+.curated-playlists::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+.playlist-container::-webkit-scrollbar-thumb:hover,
+.curated-playlists::-webkit-scrollbar-thumb:hover {
+    background: #590242;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+.playlist-section,
+.curated-section {
+    flex: 1;
+    width: 50%;
+    box-sizing: border-box;
+}
+.playlist-container,
+.curated-playlists {
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.playlist-container {
+    background-color: #0d8dfb;
+}
+
+.curated-playlists {
+    background-color: #020873;
+}
+.playlist-card {
+    display: flex;
+    align-items: center;
+    height: 140px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.playlist-card h3 {
+    text-transform: uppercase;
+}
+.playlist-section h2 {
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #020659;
+}
+.curated-section h2 {
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #020659;
+}
+.playlist-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.playlist-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+.playlist-info {
+    flex: 1;
+}
+.btn-all-playlists, .btn-more-curated {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #590242;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    align-self: flex-end;
+}
+
+.btn-all-playlists:hover, .btn-more-curated:hover {
+    background-color: #020659;
+    color: #fff;
+}
+.playlist-section, .curated-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 834px) {
+
+    .btn-all-playlists,
+    .btn-more-curated {
+        align-self: flex-start;
+        margin-left: 25px;
+    }
+}
+@media (max-width: 834px) {
+
+    .main-container {
+        display: block;
+    }
+
+    .playlist-section,
+    .curated-section {
+        width: 100%;
+    }
+
+    .playlist-container,
+    .curated-playlists {
+        white-space: nowrap;
+    }
+
+    .playlist-card {
+        align-items: center;
+        display: inline-block;
+
+        justify-content: flex-start;
+    }
+
+    .playlist-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .playlist-info h3,
+    .playlist-info p {
+        margin: 0;
+    }
+}
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #020659;
+    text-align: center;
+    color: #590242;
+    font-size: 16px;
+    background-color: #ffffff;
+}
